@@ -1,0 +1,14 @@
+div.container{
+    margin-left: 40px;
+}
+
+a.navbar-brand{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 992px){
+    #logo{
+        display: block;
+    }
+}
