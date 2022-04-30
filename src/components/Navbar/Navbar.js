@@ -1,7 +1,9 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Container} from 'react-bootstrap';
+import { Navbar} from 'react-bootstrap';
+import { Nav} from 'react-bootstrap';
+import { NavDropdown} from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 
-import './Navbar.css'
 import '../CartWidget/CartWidget'
 import CartWidget from '../CartWidget/CartWidget';
 
@@ -9,6 +11,7 @@ const NavBar = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
+        <Navbar.Brand href="#" id='logo'>LOGO</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="#">
@@ -20,10 +23,9 @@ const NavBar = () => {
                 <NavDropdown.Item href="#">Tercera</NavDropdown.Item>
             </NavDropdown>
             </Nav>
-            <Navbar.Brand href="#" id='logo'>LOGO</Navbar.Brand>
         </Navbar.Collapse>
-        </Container>
         <CartWidget/>
+        </Container>
         </Navbar>
     );
 };

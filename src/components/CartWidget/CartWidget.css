@@ -1,5 +1,9 @@
 .cart-widget{
-    margin-right: 40px;
+    margin-right: 80px;
+}
+
+.cart-widget:hover{
+    cursor: pointer;
 }
 
 .qty-display {
