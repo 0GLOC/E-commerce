@@ -1,0 +1,22 @@
+button.btn.btn-dark.btn-lg{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 290px;
+    height: 40px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 0;
+    border-radius: none;
+    font-size: 15px;
+    background-color: #ced4da;
+    color: black;
+    border: none;
+}
+
+button.btn.btn-dark.btn-lg:hover{
+    background-color: black;
+    color: #fff;
+}

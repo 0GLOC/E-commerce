@@ -4,6 +4,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 import '../CartWidget/CartWidget.css'
 
+
 const CartWidget = () => {
     return(
         <div className="cart-widget">
@@ -12,5 +13,6 @@ const CartWidget = () => {
         </div>
     );
 };
+
 
 export default CartWidget;

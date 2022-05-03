@@ -1,0 +1,50 @@
+div.btn-group{
+    display: inline-flex;
+    margin-top: 20px;  
+    border: 1px solid #ced4da;
+}
+
+button.btn{
+    width: 70px;
+    height: 40px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+button.btn.btn-danger{
+    color: red;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+button.btn.btn-danger:hover{
+    background-color: #dc3545;
+    color: black;
+}
+
+button.btn.btn-success{
+    color: green;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+button.btn.btn-success:hover{
+    background-color:#198754;
+    color: black
+}
+
+.NumeroContador{
+    display: block;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+}
+
+.product{
+    font-size: 30px;
+    margin-top: 40px;
+}
