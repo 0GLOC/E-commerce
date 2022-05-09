@@ -1,37 +1,29 @@
 import React, { useState } from 'react';
 import { Button, ButtonGroup } from 'react-bootstrap';
-import AddCart from '../AddCart/AddCart';
 import '../ItemCount/ItemCount.css'
 
 
-const ItemCount = ({initialValue = 1}) => {
-    let [count, setCount] = useState(initialValue);
-  
-    function sumar(){
-      setCount(count + 1);
-        if (count>= 20){
-        alert('No hay stock disponible')
-        setCount(20);
-        };
+
+const ItemCount = ({initial, stock, onAdd}) => {
+
+    const [count, setCount] = useState(initial);
+
+    const addProduct = (num) => {
+      setCount(count + num);
     };
-  
-    function restar(){
-      setCount(count - 1);
-      if (count<= 1){
-          console.log('Cantidad incorrecta')
-          setCount(1);
-      };
-    };
-  
+
     return (
       <div>
-        <h2 className='product'>Nombre del producto</h2>
         <ButtonGroup aria-label="Basic example">
-            <Button variant="danger" onClick={(restar)}>-</Button>
+            <Button variant="danger" onClick={() => addProduct(-1)} disabled={count === initial ? true : null}>-</Button>
             <p className='NumeroContador'>{count}</p>
-            <Button variant="success" onClick={(sumar)}>+</Button>
+            <Button variant="success" onClick={() => addProduct(+1)} disabled={count === stock ? true : null && alert}>+</Button>
         </ButtonGroup>
-        <AddCart/>
+        <div>
+           <div className="d-grid gap-2">
+                <Button variant="dark" size="lg" onClick={() => onAdd(count)} disabled={stock === 0 ? true : null}>Agregar al Carrito</Button>
+            </div> 
+        </div>
       </div>
     );
   };
