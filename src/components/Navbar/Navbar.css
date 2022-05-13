@@ -1,0 +1,16 @@
+#collasible-nav-dropdown{
+    padding: 0rem;
+}
+
+a.active{
+    transition: color .15s ease-in-out;
+    transition-property: color;
+    transition-duration: 0.15s, 0.15s, 0.15s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s, 0s, 0s;
+    color: rgba(255,255,255,.55);
+}
+
+a.active:hover{
+    color: rgb(233, 233, 233);
+}

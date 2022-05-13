@@ -2,30 +2,28 @@ import React from 'react';
 import { Navbar} from 'react-bootstrap';
 import { Nav} from 'react-bootstrap';
 import { NavDropdown} from 'react-bootstrap';
-import { Container} from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
+import './Navbar.css'
 import '../CartWidget/CartWidget'
 import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container>
-        <Navbar.Brand href="#" id='logo'>LOGO</Navbar.Brand>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="#">
-            <Nav.Link href="#">Ejemplo 1</Nav.Link>
-            <Nav.Link href="#p">Ejemplo 2</Nav.Link>
+        <Navbar.Collapse id="responsive-navbar-nav"  style={{marginLeft: '60px'}}>
+            <Nav>
+                <NavLink to='/' style={({ isActive }) => isActive ? { textDecoration: 'none',} : {textDecoration: 'none', color: 'rgba(255,255,255,.55)'}}>Todos Los Productos</NavLink>
+            <Nav.Link href="#p"></Nav.Link>
             <NavDropdown title="Categorias" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#">Primera</NavDropdown.Item>
-                <NavDropdown.Item href="#">Segunda</NavDropdown.Item>
-                <NavDropdown.Item href="#">Tercera</NavDropdown.Item>
+                <NavLink className="dropdown-item" to="/categoria/Acción">Acción</NavLink>
+                <NavLink className="dropdown-item" to="/categoria/RPG">RPG</NavLink>
+                <NavLink className="dropdown-item" to="/categoria/Plataformas">Plataformas</NavLink>  
             </NavDropdown>
             </Nav>
         </Navbar.Collapse>
         <CartWidget/>
-        </Container>
         </Navbar>
     );
 };

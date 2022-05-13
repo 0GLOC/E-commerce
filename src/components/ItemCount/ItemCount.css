@@ -66,3 +66,9 @@ button.btn.btn-dark.btn-lg:hover{
     background-color: black;
     color: #fff;
 }
+
+@media (max-width: 525px) {
+    button.btn.btn-dark.btn-lg{
+        width: 150px;
+    }
+}
