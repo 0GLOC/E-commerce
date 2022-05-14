@@ -46,6 +46,8 @@ const ItemDetail = () => {
                                 price={singular.price}
                                 stock={singular.stock}
                                 id={singular.id}
+                                descripcion={singular.descripcion}
+                                desarrollador={singular.desarrollador}
                             />
                         </div>
                         );
