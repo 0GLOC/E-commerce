@@ -64,7 +64,9 @@
     }
     .descripcion{
         box-shadow: 0 0 10px #b6746ece;
+        width: 350px;
         margin-top: 20px;
+        margin-left: 0px;
     }
     .container-fluid{
         display: flex;
