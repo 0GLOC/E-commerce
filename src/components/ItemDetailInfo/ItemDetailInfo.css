@@ -32,17 +32,16 @@
     .descripcion{
         overflow: scroll;
         width: 400px;
-        margin-top: 20px;
-        margin-left: 0px;
-        height: 400px;
+        margin-left: 25px;
+        height: 800px;
     }
-    .container-fluid{
-        display: flex;
-        flex-wrap: wrap;
+    .SecondProduct{
+        display: grid;
+        margin: 0px;
     }
 }
 
-@media (max-width: 836px) {
+@media (max-width: 1028px) {
     .listProductsInfo{
         margin: 0;
     }
@@ -65,6 +64,11 @@
     }
     .descripcion{
         box-shadow: 0 0 10px #b6746ece;
+        margin-top: 20px;
+    }
+    .container-fluid{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
