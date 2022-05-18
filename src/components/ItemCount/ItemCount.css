@@ -65,6 +65,7 @@ button.btn.btn-dark.btn-lg{
 button.btn.btn-dark.btn-lg:hover{
     background-color: black;
     color: #fff;
+    border-radius: 10px;
 }
 
 @media (max-width: 525px) {

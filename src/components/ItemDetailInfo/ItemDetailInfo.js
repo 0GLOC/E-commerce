@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { Card } from 'react-bootstrap';
 
 import '../ItemDetailInfo/ItemDetailInfo.css'
+import ButtonReturn from '../buttonReturn/ButtonReturn';
 
 const Item = ({ name, image, price, id, stock, categoria, descripcion, desarrollador }) => {
+  const [buttonAdd, setButtonAdd] = useState('button')
+  
   const onAdd = (count) => {
     alert(`Has agregado ${count} juegos`);
+    setButtonAdd();
   };
+
     return (
       <div className='container-fluid'>
           <div>
@@ -18,7 +23,7 @@ const Item = ({ name, image, price, id, stock, categoria, descripcion, desarroll
                     <Card.Title className="product-card__nameDetail">{name}</Card.Title>
                     <Card.Text className="product-card__priceDetail">${price}</Card.Text>
                   </Card.Body>
-                  <ItemCount stock={stock} onAdd={onAdd} initial={1}/>
+                  { buttonAdd === 'button' ? <ItemCount stock={stock} onAdd={onAdd} initial={1}/> : <ButtonReturn/>}
                 </Card>
             </article>
           </div>

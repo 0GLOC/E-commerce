@@ -1,0 +1,20 @@
+.SmallButton{
+    margin: 5px;
+    width: 20px;
+    margin-bottom: 15px;
+}
+
+button.SmallButton.btn.btn-dark.btn-sm{
+    border: none;
+    width: 160px;
+    background-color: #ced4da;
+    color: black;
+}
+
+button.SmallButton.btn.btn-dark.btn-sm:hover{
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
