@@ -3,7 +3,8 @@
 }
 
 .cart-widget:hover{
-    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: transparent;
 }
 
 .qty-display {

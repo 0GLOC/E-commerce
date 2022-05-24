@@ -48,6 +48,7 @@ const ItemDetail = () => {
                                 id={singular.id}
                                 descripcion={singular.descripcion}
                                 desarrollador={singular.desarrollador}
+                                categoria={singular.categoria}
                             />
                         </div>
                         );

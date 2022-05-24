@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { Card } from 'react-bootstrap';
-
 import '../ItemDetailInfo/ItemDetailInfo.css'
 import ButtonReturn from '../buttonReturn/ButtonReturn';
+import { useCartContext } from '../../context/CartContext';
 
-const Item = ({ name, image, price, id, stock, categoria, descripcion, desarrollador }) => {
+const ItemDetailInfo = ({ name, image, price, id, stock, categoria, descripcion, desarrollador }) => {
   const [buttonAdd, setButtonAdd] = useState('button')
+
+  const {addToCart} = useCartContext()
   
   const onAdd = (count) => {
     alert(`Has agregado ${count} juegos`);
     setButtonAdd();
+    addToCart({ name, price, image, id, categoria, count })
   };
 
     return (
@@ -38,4 +41,4 @@ const Item = ({ name, image, price, id, stock, categoria, descripcion, desarroll
     );
   };
   
-  export default Item;
+  export default ItemDetailInfo;

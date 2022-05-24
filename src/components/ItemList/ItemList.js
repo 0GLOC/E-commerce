@@ -74,7 +74,7 @@ const ItemList = () => {
                     }
                 </div>
                 ) : (
-                    <Spinner animation="border" role="status" style={{marginTop: '50px'}}>
+                    <Spinner animation="border" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </Spinner>
                 )
