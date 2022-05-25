@@ -31,13 +31,20 @@
 @media (max-width: 1562px){
     .descripcion{
         overflow: scroll;
-        width: 400px;
+        width: 600px;
         margin-left: 25px;
         height: 800px;
     }
     .SecondProduct{
         display: grid;
         margin: 0px;
+    }
+}
+
+@media (max-width: 1265px){
+    .descripcion{
+        overflow: scroll;
+        width: 400px;
     }
 }
 
