@@ -8,12 +8,13 @@ import '../CartWidget/CartWidget.css'
 
 
 const CartWidget = () => {
-    const { cartList } = useCartContext()
+    const { cartList, cantidadTotal } = useCartContext()
+
     return(
         <Link to='/cart'>
             <div className="cart-widget">
                 <FontAwesomeIcon icon={faGamepad} size="2x" color="white"/>
-                <div className="qty-display">{cartList.length}</div>
+                {cartList.length >= 1 ? <div className="qty-display">{cantidadTotal()}</div> : null}
             </div>
         </Link>
     );

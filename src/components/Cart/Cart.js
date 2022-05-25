@@ -4,12 +4,14 @@ import { Card, Button } from "react-bootstrap";
 import './Cart.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
-    const { cartList, clear, removeItem } = useCartContext()
+    const { cartList, clear, removeItem, precioTotal } = useCartContext()
 
     return(
         <div>
+            {cartList.length === 0 ? <div className="cart-empty">Carrito Vacio</div> : null}
             <div className='cardCart'>
             {cartList.map(product => 
                 <Card>
@@ -22,11 +24,12 @@ const Cart = () => {
                         <Card.Text className="product-cart__price">${product.price}</Card.Text>
                         <Card.Text className="product-cart__price">Cantidad: <b>{product.count}</b></Card.Text>
                         <Card.Text className="product-cart__price">Categoría: <b>{product.categoria}</b></Card.Text>
-                        <Card.Text className="product-cart__price">Total: <b>${product.count * product.price}</b></Card.Text>
                     </Card.Body>
-                </Card>)}
+                </Card>
+                )}
             </div>
-            <Button variant="secondary" size="lg" onClick={clear}>Vaciar Carrito</Button>
+            {cartList.length === 0 ? null : <Card className="total-price">Total: ${precioTotal()}</Card>}
+            {cartList.length === 0 ? <Link to='/'><Button variant="dark" size="lg">Ver Productos</Button></Link> : <Button variant="secondary" size="lg" onClick={clear}>Vaciar Carrito</Button>}
         </div>
     );
 };
