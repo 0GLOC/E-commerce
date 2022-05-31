@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
-import { productList } from "../../data/Data";
 import Item from "../Item/Item";
 import { Spinner } from "react-bootstrap";
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
 
 
 import '../ItemList/ItemList.css'
@@ -9,47 +9,22 @@ import { useParams } from "react-router-dom";
 
 const ItemList = () => {
     const [products, setProducts] = useState([]);
-
     const {types} = useParams();
 
     useEffect(() => {
         if (types) {
-            const getProducts = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    resolve(productList.filter((prods) => prods.categoria === types));
-                }, 1000);
-            }, []);
-        
-            const getProductsData = async () => {
-                try {
-                  const result = await getProducts;
-                  setProducts(result);
-                }
-                catch (error) {
-                  console.log(error);
-                  alert('No podemos mostrar los productos en este momento');
-                }
-            };
-
-            getProductsData();
+            const db = getFirestore()
+            const queryCollection = collection(db, 'productos')
+            const queryCollectionFilter = query(queryCollection, where('categoria', '==', types))
+            getDocs(queryCollectionFilter)
+            .then(resp => setProducts( resp.docs.map(item => ( {id: item.id, ...item.data()} ) ) ) )
+            .catch((err) => console.log(err))
         } else {
-            const getProducts = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                  resolve(productList);
-                }, 2000);
-            }, []);
-        
-            const getProductsData = async () => {
-                try {
-                  const result = await getProducts;
-                  setProducts(result);
-                }
-                catch (error) {
-                  console.log(error);
-                  alert('No podemos mostrar los productos en este momento');
-                }
-            };
-            getProductsData();
+            const db = getFirestore()
+            const queryCollection = collection(db, 'productos')
+            getDocs(queryCollection)
+            .then(resp => setProducts( resp.docs.map(item => ( {id: item.id, ...item.data()} ) ) ) )
+            .catch((err) => console.log(err))
         }
     }, [types])
 

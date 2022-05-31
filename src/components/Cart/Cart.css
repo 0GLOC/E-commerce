@@ -49,9 +49,18 @@ button.btn.btn-secondary.btn-lg:hover{
     border-radius: 10px;
 }
 
-.cart-empty{
+div.cart-empty.card{
     font-size: 20px;
     margin-top: 14%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+div.cart-empty.card:hover{
+    box-shadow: none;
+    transform: none;
 }
 
 div.total-price.card{

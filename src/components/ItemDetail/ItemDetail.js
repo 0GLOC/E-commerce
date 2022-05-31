@@ -1,59 +1,41 @@
-import { productList } from "../../data/Data";
 import { useState, useEffect } from "react";
 import { Spinner } from "react-bootstrap";
 import ItemDetailInfo from "../ItemDetailInfo/ItemDetailInfo";
 import { useParams } from "react-router-dom";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+
 
 
 const ItemDetail = () => {
     const [detail, setDetail] = useState([]);
-
+    const [loading, setLoading] = useState(true)
     const { detailId } = useParams()
 
-    const getDetail = new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve(productList);
-        }, 2000);
-    }, []);
-
-    const getDetailData = async () => {
-        try {
-          const result = await getDetail;
-          setDetail(result);
-        }
-        catch (error) {
-          console.log(error);
-          alert('No podemos mostrar los productos en este momento');
-        }
-    };
-
     useEffect(() => {
-        getDetailData();
-    });
-
-    const singular = detail.find (datos => datos.id.toString() === detailId.toString());
+        const db = getFirestore()
+        const dbQuery = doc(db, 'productos', detailId)
+        getDoc(dbQuery)
+        .then(resp => setDetail( {id: resp.id, ...resp.data()} ) )
+        .catch((err) => console.log(err))
+        .finally(() => setLoading(true))
+    }, [detailId])
 
     return (
         <div className="listProductsInfo">
-        {detail.length ? (
+        {loading ? (
             <div className="SecondProduct">
-                {detail.reduce((det) => {
-                    return (
-                        <div key={det.id} className='col-md-4'>
-                            <ItemDetailInfo
-                                name={singular.name}
-                                image={singular.image}
-                                price={singular.price}
-                                stock={singular.stock}
-                                id={singular.id}
-                                descripcion={singular.descripcion}
-                                desarrollador={singular.desarrollador}
-                                categoria={singular.categoria}
-                            />
-                        </div>
-                        );
-                    })
-                }
+                <div key={detail.id} className='col-md-4'>
+                    <ItemDetailInfo
+                        name={detail.name}
+                        image={detail.image}
+                        price={detail.price}
+                        stock={detail.stock}
+                        id={detail.id}
+                        descripcion={detail.descripcion}
+                        desarrollador={detail.desarrollador}
+                        categoria={detail.categoria}
+                    />
+                </div>
             </div>
                 ) : (
                     <Spinner animation="border" role="status">

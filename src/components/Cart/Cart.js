@@ -11,7 +11,7 @@ const Cart = () => {
 
     return(
         <div>
-            {cartList.length === 0 ? <div className="cart-empty">Carrito Vacio</div> : null}
+            {cartList.length === 0 ? <Card className="cart-empty">Carrito Vacio</Card> : null}
             <div className='cardCart'>
             {cartList.map(product => 
                 <Card>
@@ -21,14 +21,15 @@ const Cart = () => {
                     <Card.Img variant="top" className="product-cart__image" src={product.image} alt="" />
                     <Card.Body>
                         <Card.Title className="product-cart__name">{product.name}</Card.Title>
-                        <Card.Text className="product-cart__price">${product.price}</Card.Text>
+                        <br></br>
+                        <Card.Text className="product-cart__price">Precio: <b>${product.price * product.count}</b></Card.Text>
                         <Card.Text className="product-cart__price">Cantidad: <b>{product.count}</b></Card.Text>
                         <Card.Text className="product-cart__price">Categoría: <b>{product.categoria}</b></Card.Text>
                     </Card.Body>
                 </Card>
                 )}
             </div>
-            {cartList.length === 0 ? null : <Card className="total-price">Total: ${precioTotal()}</Card>}
+            {cartList.length === 0 ? null : <Card className="total-price">${precioTotal()}</Card>}
             {cartList.length === 0 ? <Link to='/'><Button variant="dark" size="lg">Ver Productos</Button></Link> : <Button variant="secondary" size="lg" onClick={clear}>Vaciar Carrito</Button>}
         </div>
     );

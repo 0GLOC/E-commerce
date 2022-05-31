@@ -6,12 +6,14 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        setLoading(false)
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000);
     }, [])
     
     return (
         <div>
-            {loading ? <Spinner animation="border" role="status"/> : <ItemDetail/>}
+            {loading ? <Spinner className="spinner" animation="border" role="status"/> : <ItemDetail/>}
         </div>
     )
 }

@@ -40,5 +40,5 @@ const ItemDetailInfo = ({ name, image, price, id, stock, categoria, descripcion,
         </div>
     );
   };
-  
-  export default ItemDetailInfo;
+
+export default ItemDetailInfo;
