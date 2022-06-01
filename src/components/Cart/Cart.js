@@ -30,6 +30,7 @@ const Cart = () => {
                 )}
             </div>
             {cartList.length === 0 ? null : <Card className="total-price">${precioTotal()}</Card>}
+            {cartList.length === 0 ? null : <Link to='/formulario'><Button variant="light" size="lg">Comprar</Button></Link>}
             {cartList.length === 0 ? <Link to='/'><Button variant="dark" size="lg">Ver Productos</Button></Link> : <Button variant="secondary" size="lg" onClick={clear}>Vaciar Carrito</Button>}
         </div>
     );
