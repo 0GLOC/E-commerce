@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext';
 import './Formulario.css'
+import swal from 'sweetalert';
 
 const Formulario = () => {
 
@@ -51,7 +52,10 @@ const Formulario = () => {
         })))
         batch.commit()
 
-        alert('Compra realizada con exito')
+        swal({
+            title: 'Compra realizada con exito!',
+            icon: "success"
+        })
     }
 
     

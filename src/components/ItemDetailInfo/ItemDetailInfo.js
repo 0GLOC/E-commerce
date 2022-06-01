@@ -4,6 +4,7 @@ import { Card } from 'react-bootstrap';
 import '../ItemDetailInfo/ItemDetailInfo.css'
 import ButtonReturn from '../buttonReturn/ButtonReturn';
 import { useCartContext } from '../../context/CartContext';
+import swal from 'sweetalert';
 
 const ItemDetailInfo = ({ name, image, price, id, stock, categoria, descripcion, desarrollador }) => {
   const [buttonAdd, setButtonAdd] = useState('button')
@@ -11,7 +12,10 @@ const ItemDetailInfo = ({ name, image, price, id, stock, categoria, descripcion,
   const {addToCart} = useCartContext()
   
   const onAdd = (count) => {
-    alert(`Has agregado ${count} juegos`);
+    swal({
+      title: `Has agregado ${count} juegos al carrito`,
+      icon: "success",
+    });
     setButtonAdd();
     addToCart({ name, price, image, id, categoria, count })
   };
