@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 import './Navbar.css'
 import '../CartWidget/CartWidget'
+import logo from '../../assets/img/Logo.png'
 import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
@@ -14,6 +15,13 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav"  style={{marginLeft: '60px'}}>
             <Nav>
+                <NavLink className='logo' to='/'>
+                    <img
+                    src={logo}
+                    alt='logo'
+                    height='40'
+                    />
+                </NavLink>
                 <NavLink to='/' style={({ isActive }) => isActive ? { textDecoration: 'none',} : {textDecoration: 'none', color: 'rgba(255,255,255,.55)'}}>Todos Los Productos</NavLink>
             <Nav.Link href="#p"></Nav.Link>
             <NavDropdown title="Categorias" id="collasible-nav-dropdown">

@@ -13,4 +13,25 @@ a.active{
 
 a.active:hover{
     color: rgb(233, 233, 233);
+    transform: translateY(-1px);
+    box-shadow: transparent;
+}
+
+#collasible-nav-dropdown:hover{
+    color: rgb(233, 233, 233);
+    transform: translateY(-1px);
+    box-shadow: transparent;
+}
+
+.logo{
+    margin-right: 15px;
+}
+
+.logo:hover{
+    transform: translateY(-2px);
+    box-shadow: transparent;
+}
+
+div.navbar-nav{
+    align-items: center;
 }

@@ -63,7 +63,7 @@ button.btn.btn-dark.btn-lg{
 }
 
 button.btn.btn-dark.btn-lg:hover{
-    background-color: black;
+    background-color: #212529;
     color: #fff;
     border-radius: 10px;
 }

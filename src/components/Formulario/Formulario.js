@@ -15,6 +15,11 @@ const Formulario = () => {
     const [phone, setPhone] = useState('');
 
     async function generarOrden() {
+
+        swal({
+            title: 'Compra realizada con exito!',
+            icon: "success"
+        })
         
         let orden = {}
 
@@ -51,24 +56,20 @@ const Formulario = () => {
             stock: res.data().stock - cartList.find(item => item.id === res.id).count
         })))
         batch.commit()
-
-        swal({
-            title: 'Compra realizada con exito!',
-            icon: "success"
-        })
     }
 
     
     return(
-        <div className="form-register">
+        <form className="form-register">
             <h4>Formulario de compra</h4>
-            <input className="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" autoComplete='off' onChange={ev => setName(ev.target.value)}/>
-            <input className="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" autoComplete='off' onChange={ev => setApellidos(ev.target.value)}/>
-            <input className="controls" type="email" name="correo" id="email" placeholder="Ingrese su Correo" autoComplete='off' onChange={ev => setEmail(ev.target.value)}/>
-            <input className="controls" type="number" name="correo" id="phone" placeholder="Ingrese su Número Telefonico" autoComplete='off' onChange={ev => setPhone(ev.target.value)}/>
+            <input className="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" autoComplete='off' onChange={ev => setName(ev.target.value)} required/>
+            <input className="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" autoComplete='off' onChange={ev => setApellidos(ev.target.value)} required/>
+            <input className="controls" type="email" name="correo" id="email" placeholder="Ingrese su Correo" autoComplete='off' onChange={ev => setEmail(ev.target.value)} required/>
+            <input className="controls" type="email" name="correo" id="email" placeholder="Ingrese su Correo Nuevamente" autoComplete='off' required/>
+            <input className="controls" type="number" name="correo" id="phone" placeholder="Ingrese su Número Telefonico" autoComplete='off' onChange={ev => setPhone(ev.target.value)} required/>
             {cartList.length === 0 ? null : <Button variant="light" size="lg" onClick={generarOrden}>Comprar</Button>}
             {cartList.length === 0 ? <Link to='/'><Button variant="info" className='regresar' size="lg">Regresar</Button></Link> : <Link to='/cart'><Button variant="info" className='regresar' size="lg">Regresar</Button></Link>}
-        </div>
+        </form>
     );
 };
 

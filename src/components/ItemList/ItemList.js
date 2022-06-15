@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from "react";
 import Item from "../Item/Item";
-import { Spinner } from "react-bootstrap";
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
-
+import { useParams } from "react-router-dom";
 
 import '../ItemList/ItemList.css'
-import { useParams } from "react-router-dom";
+
 
 const ItemList = () => {
     const [products, setProducts] = useState([]);
@@ -31,7 +30,6 @@ const ItemList = () => {
 
     return (
         <div className="listProducts">
-            {products.length ? (
                 <div className="onlyProduct">
                     {products.map((product) => {
                         return (
@@ -48,12 +46,6 @@ const ItemList = () => {
                         })
                     }
                 </div>
-                ) : (
-                    <Spinner animation="border" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </Spinner>
-                )
-            }
         </div>
     );
 };

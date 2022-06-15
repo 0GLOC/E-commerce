@@ -12,7 +12,7 @@ button.SmallButton.btn.btn-dark.btn-sm{
 }
 
 button.SmallButton.btn.btn-dark.btn-sm:hover{
-    background-color: black;
+    background-color: #212529;
     border: none;
     color: white;
     border-radius: 10px;

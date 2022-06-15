@@ -77,3 +77,16 @@ button.btn.btn-light.btn-lg:hover{
     border-radius: 10px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.warnings{
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  color: #6b1f18ce;
+  padding-top: 10px;
+}
