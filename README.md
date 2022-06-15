@@ -38,10 +38,10 @@ En este proyecto se han utilizado diversas librerias, algunas para complementar 
 
 ## 🎩 Creador
     
-    Hola! Mi nombre es Sergio Maidana, y si, actualmente soy un desarrollador que está estudiando programación.
-    Comenza desde muy corta edad en el areá de la informatica aunque no en la programación sino en la reparación de componentes y pc. Posteriormente me encontré atraido por la programación, asique acá me encuentro, realizando lo que me gusta. Espero poder seguir estudiando este hermoso ambito y quizá un dia vivir de esto.
+Hola! Mi nombre es Sergio Maidana, y si, actualmente soy un desarrollador que está estudiando programación.
+Comenzé desde muy corta edad en el areá de la informatica aunque no en la programación sino en la reparación de componentes y pc. Posteriormente me encontré atraido por la programación, asique acá me encuentro, realizando lo que me gusta. Espero poder seguir estudiando este hermoso ambito y quizá un dia vivir de esto.
 
-➡️ Comenze estudiando Html , Sass y Css (Te dejo el proyecto por si te interesa: [Clickeame](https://0gloc.github.io/Proyecto-Aerosmith/))
+➡️ Comenzé estudiando Html , Sass y Css (Te dejo el proyecto por si te interesa: [Clickeame](https://0gloc.github.io/Proyecto-Aerosmith/))
 ➡️ Luego pasé a estudiar Javascript ([Clickeame](https://0gloc.github.io/Proyecto-JS/))
 ➡️ Y actualmente me encuentro estudiando React Native y React JS ([React JS](https://github.com/0GLOC/e-commerce.git) - [React Native](https://github.com/0GLOC/App-Movil-React-Native-.git))
 👐 Y estoy deseando empezar Backend, Te adjunto mi [Github](https://github.com/0GLOC)
