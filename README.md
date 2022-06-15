@@ -46,4 +46,4 @@ En este proyecto se han utilizado diversas librerias, algunas para complementar 
 ➡️ Y actualmente me encuentro estudiando React Native y React JS ([React JS](https://github.com/0GLOC/e-commerce.git) - [React Native](https://github.com/0GLOC/App-Movil-React-Native-.git))
 👐 Y estoy deseando empezar Backend, Te adjunto mi [Github](https://github.com/0GLOC)
 
-## 🏆  [Link a la página](https://candid-centaur-da9e0e.netlify.app/)  🏆
+## 🏆  [Link a la página](https://games4life.netlify.app/)  🏆
