@@ -47,3 +47,4 @@ Comenzé desde muy corta edad en el areá de la informatica aunque no en la prog
 👐 Y estoy deseando empezar Backend, Te adjunto mi [Github](https://github.com/0GLOC)
 
 ## 🏆  [Link a la página](https://games4life.netlify.app/)  🏆
+[Video Funcional](https://drive.google.com/file/d/1N2QxbGFHh7rA_bkbofJr4Sw7LYEZSBuV/view?usp=sharing)
