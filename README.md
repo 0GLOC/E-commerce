@@ -22,6 +22,8 @@ Primero que nada, hay que destacar que para la creación de esta aplicación se 
 Funcionalmente es muy agradable y sencilla con el usuario, ya que lo unico que deberemos hacer es elegir el producto, sus cantidades, agregarlo al carrito, y realizar la transacción (en este caso un formulario, atravez del cual le enviamos los datos al vendedor mediante Firebase) correspondiente.
 Y con el vendedor o nosotros mismos, también lo es. Ya que solo debemos entrar a Firebase y llevar un registro de las compras (el cual queda en la misma base de datos).
 
+[Video Funcional](https://drive.google.com/file/d/1N2QxbGFHh7rA_bkbofJr4Sw7LYEZSBuV/view?usp=sharing)
+
 ## 🚀 Librerías externas utilizadas
 
 En este proyecto se han utilizado diversas librerias, algunas para complementar el estilo del proyecto como lo son Boostrap y Sweet Alert, y otras para llevar acabo diferentes funciones como Firebase para crear una "base de datos" sencilla y practica al cliente. También utilizamos React Router Dom para navegar entre las paginas de nuestro proyecto. Cabe destacar que para este proyecto se ha utilizado npm, por lo que si se desea visualizar deberá escribir en la terminal "npm start".
@@ -47,4 +49,3 @@ Comenzé desde muy corta edad en el areá de la informatica aunque no en la prog
 👐 Y estoy deseando empezar Backend, Te adjunto mi [Github](https://github.com/0GLOC)
 
 ## 🏆  [Link a la página](https://games4life.netlify.app/)  🏆
-[Video Funcional](https://drive.google.com/file/d/1N2QxbGFHh7rA_bkbofJr4Sw7LYEZSBuV/view?usp=sharing)
